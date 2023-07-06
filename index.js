@@ -16,14 +16,14 @@ Calories Burned = (MET x Body Weight in kg x Duration in hours)
 
 //redirecting to a page if sumbit button is clicked
 const form = document.querySelector('form');
-const submit= document.querySelector('.submit');
 
-submit.addEventListener('click',(e)=>{
-    if (!form.checkValidity()) { //checks the form validity using the checkValidity() method of the form element
-        e.preventDefault(); // Prevent form submission
-        alert('Please fill in all required fields.');
-      } else {
-        window.location.href = "result.html"; // Redirect to the result page
-      } 
-   
-})
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // Prevent form submission
+
+  if (!form.checkValidity()) {
+    // Check form validity using the checkValidity() method of the form element
+    alert('Please fill in all required fields.');
+  } else {
+    window.location.href = "result.html"; // Redirect to the result page
+  }
+});
