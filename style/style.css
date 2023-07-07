@@ -69,3 +69,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #c750a1;
 }
+
+.activityn:hover{
+  cursor: pointer;
+}
